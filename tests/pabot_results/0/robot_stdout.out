@@ -1,0 +1,31 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.testDemo6 :: To validate the login form                                 
+==============================================================================
+Validate UnSuccessful login                                           | PASS |
+------------------------------------------------------------------------------
+Validate Cards display in the shopping page                           | PASS |
+------------------------------------------------------------------------------
+Select the form and fill login details                                  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\HP\PycharmProjects\RobotFramework\tests\testDemo6.robot:33
+    T:  Select the form and fill login details    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\HP\PycharmProjects\RobotFramework\tests\testDemo6.robot:34
+      Fill the login details and login form    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\HP\PycharmProjects\RobotFramework\tests\testDemo6.robot:86
+      Wait Until Element Is Visible    xpath://button[@id='okayBtn']
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://button[@id='okayBtn']' not visible after 5 seconds.
+------------------------------------------------------------------------------
+Tests.testDemo6 :: To validate the login form                         | FAIL |
+3 tests, 2 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+3 tests, 2 passed, 1 failed
+==============================================================================
+Output:  C:\Users\HP\PycharmProjects\RobotFramework\tests\pabot_results\0\output.xml

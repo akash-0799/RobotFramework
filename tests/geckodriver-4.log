@@ -1,0 +1,15 @@
+1704714985165	geckodriver	INFO	Listening on 127.0.0.1:8847
+1704714988199	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "8848" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HP\\AppData\\Local\\Temp\\rust_mozprofileGQwpzL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704714988701	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1704714988848	Marionette	INFO	Listening on port 8856
+Read port: 8856
+WebDriver BiDi listening on ws://127.0.0.1:8848
+1704714988985	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:8848/devtools/browser/c1e64d59-0ea0-4e1d-b415-c8b435bdabb7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rahulshettyacademy.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rahulshettyacademy.com."
+1704715001758	Marionette	INFO	Stopped listening on port 8856
+Dynamically enable window occlusion 1

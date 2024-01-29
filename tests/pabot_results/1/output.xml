@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.7 on win32)" generated="20240129 22:06:50.854" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\HP\PycharmProjects\RobotFramework\tests">
+<suite id="s1-s1" name="Demo" source="C:\Users\HP\PycharmProjects\RobotFramework\tests\demo.robot">
+<test id="s1-s1-t1" name="Sum values from list" line="4">
+<kw name="Create List" library="BuiltIn">
+<var>@{listOfNumber}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240129 22:06:51.012" level="INFO">@{listOfNumber} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20240129 22:06:51.012" endtime="20240129 22:06:51.012"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${sum}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240129 22:06:51.012" level="INFO">${sum} = 0</msg>
+<status status="PASS" starttime="20240129 22:06:51.012" endtime="20240129 22:06:51.012"/>
+</kw>
+<for flavor="IN">
+<var>${number}</var>
+<value>@{listOfNumber}</value>
+<iter>
+<var name="${number}">1</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${sum}+${number}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240129 22:06:51.018" level="INFO">${sum} = 1</msg>
+<status status="PASS" starttime="20240129 22:06:51.012" endtime="20240129 22:06:51.018"/>
+</kw>
+<status status="PASS" starttime="20240129 22:06:51.012" endtime="20240129 22:06:51.018"/>
+</iter>
+<iter>
+<var name="${number}">2</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${sum}+${number}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240129 22:06:51.018" level="INFO">${sum} = 3</msg>
+<status status="PASS" starttime="20240129 22:06:51.018" endtime="20240129 22:06:51.018"/>
+</kw>
+<status status="PASS" starttime="20240129 22:06:51.018" endtime="20240129 22:06:51.018"/>
+</iter>
+<iter>
+<var name="${number}">3</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${sum}+${number}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240129 22:06:51.018" level="INFO">${sum} = 6</msg>
+<status status="PASS" starttime="20240129 22:06:51.018" endtime="20240129 22:06:51.018"/>
+</kw>
+<status status="PASS" starttime="20240129 22:06:51.018" endtime="20240129 22:06:51.018"/>
+</iter>
+<iter>
+<var name="${number}">4</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${sum}+${number}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240129 22:06:51.028" level="INFO">${sum} = 10</msg>
+<status status="PASS" starttime="20240129 22:06:51.018" endtime="20240129 22:06:51.028"/>
+</kw>
+<status status="PASS" starttime="20240129 22:06:51.018" endtime="20240129 22:06:51.028"/>
+</iter>
+<iter>
+<var name="${number}">5</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${sum}+${number}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240129 22:06:51.028" level="INFO">${sum} = 15</msg>
+<status status="PASS" starttime="20240129 22:06:51.028" endtime="20240129 22:06:51.028"/>
+</kw>
+<status status="PASS" starttime="20240129 22:06:51.028" endtime="20240129 22:06:51.028"/>
+</iter>
+<status status="PASS" starttime="20240129 22:06:51.012" endtime="20240129 22:06:51.028"/>
+</for>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${sum}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240129 22:06:51.028" endtime="20240129 22:06:51.028"/>
+</kw>
+<status status="PASS" starttime="20240129 22:06:50.996" endtime="20240129 22:06:51.028"/>
+</test>
+<status status="PASS" starttime="20240129 22:06:50.970" endtime="20240129 22:06:51.028"/>
+</suite>
+<status status="PASS" starttime="20240129 22:06:50.886" endtime="20240129 22:06:51.044"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Demo">Tests.Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
