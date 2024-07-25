@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.7 on win32)" generated="20240725 17:13:17.646" rpa="false" schemaversion="4">
+<suite id="s1" name="RobotFramework" source="C:\Users\HP\PycharmProjects\RobotFramework">
+<suite id="s1-s1" name="Tests" source="C:\Users\HP\PycharmProjects\RobotFramework\tests">
+<suite id="s1-s1-s1" name="testDemo7" source="C:\Users\HP\PycharmProjects\RobotFramework\tests\testDemo7.robot">
+<test id="s1-s1-s1-t1" name="Validate Cards display in the shopping page" line="30">
+<kw name="open the browser with url" library="Generic" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>browser=${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240725 17:13:18.400" level="INFO">Opening browser 'Chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<status status="PASS" starttime="20240725 17:13:18.399" endtime="20240725 17:13:27.791"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240725 17:13:27.791" endtime="20240725 17:13:27.887"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:18.398" endtime="20240725 17:13:27.887"/>
+</kw>
+<kw name="Fill the login form" library="LandingPage">
+<arg>${user_name}</arg>
+<arg>${valid_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240725 17:13:27.898" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20240725 17:13:27.892" endtime="20240725 17:13:28.286"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240725 17:13:28.286" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20240725 17:13:28.438" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240725 17:13:28.645" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240725 17:13:28.286" endtime="20240725 17:13:28.645"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240725 17:13:28.645" level="INFO">Clicking button 'signInBtn'.</msg>
+<status status="PASS" starttime="20240725 17:13:28.645" endtime="20240725 17:13:28.891"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:27.892" endtime="20240725 17:13:28.894"/>
+</kw>
+<kw name="wait until element is located in the page" library="ShopPage">
+<kw name="Wait Until element passed is located on Page" library="Generic">
+<arg>${shop_page_load}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${page_locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240725 17:13:28.899" endtime="20240725 17:13:32.083"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:28.896" endtime="20240725 17:13:32.083"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:28.894" endtime="20240725 17:13:32.083"/>
+</kw>
+<kw name="Verify Card titles in the shop page" library="ShopPage">
+<kw name="Create List" library="BuiltIn">
+<var>@{expected_list}</var>
+<arg>iphone X</arg>
+<arg>Samsung Note 8</arg>
+<arg>Nokia Edge</arg>
+<arg>Blackberry</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240725 17:13:32.094" level="INFO">@{expected_list} = [ iphone X | Samsung Note 8 | Nokia Edge | Blackberry ]</msg>
+<status status="PASS" starttime="20240725 17:13:32.094" endtime="20240725 17:13:32.094"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>CSS:.card-title</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20240725 17:13:32.158" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="6ccb559c5afc4cf1d4e7c8e424330164", element="f.24785560CA69FD1625DFAECBEEFA19D4.d.4AFBCC699104188F0B7458F46B0E1871.e.52")&gt;, &lt;selenium.webdriv...</msg>
+<status status="PASS" starttime="20240725 17:13:32.094" endtime="20240725 17:13:32.159"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{actual_list}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240725 17:13:32.161" level="INFO">@{actual_list} = [ ]</msg>
+<status status="PASS" starttime="20240725 17:13:32.159" endtime="20240725 17:13:32.161"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{elements}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="6ccb559c5afc4cf1d4e7c8e424330164", element="f.24785560CA69FD1625DFAECBEEFA19D4.d.4AFBCC699104188F0B7458F46B0E1871.e.52")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240725 17:13:32.195" level="INFO">iphone X</msg>
+<status status="PASS" starttime="20240725 17:13:32.163" endtime="20240725 17:13:32.195"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${actual_list}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240725 17:13:32.195" endtime="20240725 17:13:32.227"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:32.163" endtime="20240725 17:13:32.227"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="6ccb559c5afc4cf1d4e7c8e424330164", element="f.24785560CA69FD1625DFAECBEEFA19D4.d.4AFBCC699104188F0B7458F46B0E1871.e.53")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240725 17:13:32.247" level="INFO">Samsung Note 8</msg>
+<status status="PASS" starttime="20240725 17:13:32.228" endtime="20240725 17:13:32.247"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${actual_list}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240725 17:13:32.247" endtime="20240725 17:13:32.271"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:32.227" endtime="20240725 17:13:32.271"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="6ccb559c5afc4cf1d4e7c8e424330164", element="f.24785560CA69FD1625DFAECBEEFA19D4.d.4AFBCC699104188F0B7458F46B0E1871.e.54")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240725 17:13:32.297" level="INFO">Nokia Edge</msg>
+<status status="PASS" starttime="20240725 17:13:32.273" endtime="20240725 17:13:32.297"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${actual_list}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240725 17:13:32.297" endtime="20240725 17:13:32.319"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:32.273" endtime="20240725 17:13:32.319"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="6ccb559c5afc4cf1d4e7c8e424330164", element="f.24785560CA69FD1625DFAECBEEFA19D4.d.4AFBCC699104188F0B7458F46B0E1871.e.55")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240725 17:13:32.352" level="INFO">Blackberry</msg>
+<status status="PASS" starttime="20240725 17:13:32.322" endtime="20240725 17:13:32.352"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${actual_list}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240725 17:13:32.352" endtime="20240725 17:13:32.381"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:32.322" endtime="20240725 17:13:32.381"/>
+</iter>
+<status status="PASS" starttime="20240725 17:13:32.161" endtime="20240725 17:13:32.381"/>
+</for>
+<kw name="Lists Should Be Equal" library="Collections">
+<arg>${expected_list}</arg>
+<arg>${actual_list}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="PASS" starttime="20240725 17:13:32.389" endtime="20240725 17:13:32.389"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:32.083" endtime="20240725 17:13:32.391"/>
+</kw>
+<kw name="Add Items To Cart And Checkout" library="Shop">
+<arg>${listofproducts}</arg>
+<msg timestamp="20240725 17:13:32.518" level="INFO">Clicking button 'xpath:(//button[@class='btn btn-info'])[3]'.</msg>
+<msg timestamp="20240725 17:13:32.760" level="INFO">Clicking button 'xpath:(//button[@class='btn btn-info'])[4]'.</msg>
+<msg timestamp="20240725 17:13:32.899" level="INFO">Clicking link 'css:li.active a'.</msg>
+<status status="PASS" starttime="20240725 17:13:32.392" endtime="20240725 17:13:33.040"/>
+</kw>
+<kw name="Checkout" library="CheckoutPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:.btn-success</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240725 17:13:33.042" level="INFO">Clicking element 'css:.btn-success'.</msg>
+<status status="PASS" starttime="20240725 17:13:33.042" endtime="20240725 17:13:33.169"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:33.041" endtime="20240725 17:13:33.169"/>
+</kw>
+<kw name="verify if items selected and items added to cart are same">
+<arg>${list_of_products}</arg>
+<msg timestamp="20240725 17:13:33.177" level="FAIL">No keyword with name 'verify if items selected and items added to cart are same' found.</msg>
+<status status="FAIL" starttime="20240725 17:13:33.177" endtime="20240725 17:13:33.177"/>
+</kw>
+<kw name="Enter the Country and Check the Terms and Conditions" library="ConfirmationPage">
+<arg>${country_name}</arg>
+<status status="NOT RUN" starttime="20240725 17:13:33.177" endtime="20240725 17:13:33.177"/>
+</kw>
+<kw name="Purchase the Producr and Confirm the Purchase" library="ConfirmationPage">
+<status status="NOT RUN" starttime="20240725 17:13:33.177" endtime="20240725 17:13:33.177"/>
+</kw>
+<kw name="Close Browser Session" library="Generic" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240725 17:13:33.182" endtime="20240725 17:13:35.567"/>
+</kw>
+<status status="PASS" starttime="20240725 17:13:33.177" endtime="20240725 17:13:35.567"/>
+</kw>
+<tag>REGRESSION</tag>
+<status status="FAIL" starttime="20240725 17:13:18.387" endtime="20240725 17:13:35.567">No keyword with name 'verify if items selected and items added to cart are same' found.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20240725 17:13:17.721" endtime="20240725 17:13:35.576"/>
+</suite>
+<status status="FAIL" starttime="20240725 17:13:17.704" endtime="20240725 17:13:35.576"/>
+</suite>
+<status status="FAIL" starttime="20240725 17:13:17.650" endtime="20240725 17:13:35.576"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">RobotFramework.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testDemo7">RobotFramework.Tests.testDemo7</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240725 17:13:18.352" level="ERROR">Error in file 'C:\Users\HP\PycharmProjects\RobotFramework\tests\testDemo7.robot' on line 6: Importing library 'C:\Users\HP\PycharmProjects\RobotFramework\customLibraries\Checkout.py' failed: SyntaxError: unterminated string literal (detected at line 17) (Checkout.py, line 17)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\HP\PycharmProjects\RobotFramework\customLibraries
+  C:\Users\HP\PycharmProjects\RobotFramework
+  C:\Users\HP\PycharmProjects\RobotFramework
+  C:\Users\HP\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\HP\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\HP\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\HP\AppData\Local\Programs\Python\Python310
+  C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\site-packages</msg>
+</errors>
+</robot>
