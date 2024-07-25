@@ -3,6 +3,7 @@ Documentation    To validate the login form
 Library          SeleniumLibrary
 Library          Collections
 Library          ../customLibraries/Shop.py
+Library          ../customLibraries/Checkout.py
 Test Setup       open the browser with url
 Suite Setup
 Suite Teardown
@@ -33,6 +34,7 @@ Validate Cards display in the shopping page
     ShopPage.wait until element is located in the page
     ShopPage.Verify Card titles in the shop page
     add items to cart and checkout        ${listofproducts}
+    verify if items selected and items added to cart are same      ${list_of_products}
     CheckoutPage.Checkout
     ConfirmationPage.Enter the Country and Check the Terms and Conditions        ${country_name}
     ConfirmationPage.Purchase the Producr and Confirm the Purchase
